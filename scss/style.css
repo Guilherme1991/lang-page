@@ -1,0 +1,288 @@
+/*Author: Guilherme Luiz Quintino Da Silva*/
+#container, .product, header, .title, .twoTitle, .logo, .vetor, .txtTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../img/images/plano.png");
+  background-size: cover;
+}
+
+h3 {
+  font-family: "Amatic SC", cursive;
+}
+
+@media only screen and (max-width: 500px) {
+  h3 {
+    font-size: 15px;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  ul {
+    margin: 20px;
+  }
+}
+
+ul li h4 {
+  font-family: "Amatic SC", cursive;
+}
+
+@media only screen and (max-width: 500px) {
+  #container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.product {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.product img {
+  width: 250px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .product img {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .product img {
+    width: 220px;
+  }
+}
+
+.txt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+  width: 300px;
+  margin: 60px 150px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (max-width: 500px) {
+  .txt {
+    margin: 0px 0px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .txt {
+    margin: 60px 20px;
+  }
+}
+
+.txt img {
+  width: 400px;
+}
+
+@media only screen and (max-width: 500px) {
+  .txt img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .txt img {
+    width: 300px;
+  }
+}
+
+header {
+  margin: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#logo a img {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: move;
+          animation-name: move;
+  margin: 30px;
+  width: 200px;
+}
+
+@media only screen and (max-width: 500px) {
+  #logo a img {
+    margin-bottom: 40px;
+    width: 150px;
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    width: 150px;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+@keyframes move {
+  from {
+    width: 150px;
+  }
+  to {
+    width: 200px;
+  }
+}
+
+#fst img {
+  width: 270px;
+}
+
+@media only screen and (max-width: 500px) {
+  #fst img {
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .title img {
+    width: 300px;
+  }
+}
+
+.twoTitle {
+  margin: 30px;
+}
+
+@media only screen and (max-width: 500px) {
+  .twoTitle {
+    margin: 5px;
+  }
+}
+
+.twoTitle img {
+  width: 570px;
+}
+
+@media only screen and (max-width: 500px) {
+  .twoTitle img {
+    width: 330px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .twoTitle img {
+    width: 300px;
+  }
+}
+
+.ico {
+  margin-right: 300px;
+}
+
+@media only screen and (max-width: 500px) {
+  .ico {
+    position: relative;
+    top: 0px;
+    margin: 50px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ico {
+    margin: 30px;
+  }
+}
+
+.ico a img {
+  width: 200px;
+}
+
+@media only screen and (max-width: 500px) {
+  .ico a img {
+    width: 100px;
+    z-index: 999 !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .ico a img {
+    width: 150px;
+  }
+}
+
+.vetor {
+  position: relative;
+  top: 70px;
+  background: url("../img/images/vetor.png");
+  background-repeat: no-repeat;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 500px) {
+  .vetor {
+    position: relative;
+    top: 38px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 370px;
+  }
+}
+
+.rodape img {
+  width: 100%;
+}
+
+.txtTwo {
+  width: 400px;
+}
+
+@media only screen and (max-width: 900px) {
+  .txtTwo {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .txtTwo {
+    width: 300px;
+    height: 100px;
+    font-size: 14px;
+  }
+}
+
+.txtTwo p {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+}
+/*# sourceMappingURL=style.css.map */

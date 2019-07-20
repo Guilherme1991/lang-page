@@ -1,0 +1,223 @@
+/*Author: Guilherme Luiz Quintino Da Silva*/
+
+//Variáveis Sass!
+$plano: url("../img/images/plano.png");
+$coluna: column;
+$font: 'Amatic SC', cursive;
+$fundo: url('../img/images/vetor.png');
+$small-width:  500px;
+$tablet-width:  900px;
+
+
+//Placeholder selector!
+%centralize{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//@mixins 
+@mixin pixel($width: $width){
+width: $width;
+}
+@mixin marge($margin: $margin){
+margin: $margin;
+}
+@mixin position($position: $position, $top: $top){
+    position: $position;
+    top: $top;
+    }
+
+//@mixins media-querie
+@mixin small{
+    @media only screen and(max-width: #{$small-width}){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and(max-width: #{$tablet-width}){
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: $plano;
+    background-size: cover;
+}
+h3{
+    font-family: $font;
+    @include small{
+        font-size: 15px;
+        padding: 5px;
+    }
+}
+
+//Interpolação
+ul{
+    @include small{
+        margin: 20px;
+    }
+    li{
+        h4{
+            font-family: $font;  
+        }
+    }
+}
+
+#container{
+    @extend %centralize;
+    @include small{
+        flex-direction: $coluna;
+    }
+}
+.product{
+    @extend %centralize;
+    flex: 1;
+}
+.product img{
+    @include pixel(250px);
+    border-radius: 10px; 
+    @include small{
+        @include pixel(200px); 
+    }
+    @include tablet{
+        @include pixel(220px);
+    }
+}
+.txt{
+    flex: 1;
+    color: white;
+    @include pixel(300px);
+    margin: 60px 150px;
+    flex-direction: $coluna;
+    @include small{
+        margin: 0px 0px; 
+    }
+    @include tablet{
+        margin: 60px 20px;
+    }
+}
+.txt img{
+    @include pixel(400px);
+    @include small{
+        @include pixel(300px);
+    }
+    @include tablet{
+        @include pixel(300px);
+    }
+}
+header{
+    @extend %centralize;
+    @include marge(30px);
+    flex-direction: $coluna;
+}
+#logo a img{
+    animation-duration: 2s;
+    animation-name: move;
+    @include marge(30px);
+    @include pixel(200px);
+    @include small{
+        margin-bottom: 40px;
+        @include pixel(150px);
+    }
+}
+@keyframes move{
+    from{
+        @include pixel(150px); 
+    }
+    to{
+        @include pixel(200px);
+    }
+}
+#fst img{
+    @include pixel(270px);
+    @include small{
+        @include pixel(200px);
+    }
+}
+.title{
+    @extend %centralize;
+}
+.title img{
+    @include small{
+        @include pixel(300px);
+    }
+}
+.twoTitle{
+    @extend %centralize;
+    @include marge(30px);
+    @include small{
+        @include marge(5px);
+    }
+}
+.twoTitle img{
+    @include pixel(570px);
+    @include small{
+        @include pixel(330px);
+    }
+    @include tablet{
+        @include pixel(300px);
+    }
+}
+.logo{
+    @extend %centralize;
+}
+.ico{
+    margin-right: 300px;
+    @include small{
+        @include position(relative, 0px);
+        margin: 50px;
+    }
+    @include tablet{
+        margin: 30px;
+    }
+}
+.ico a img{
+    @include pixel(200px);
+    @include small{
+        @include pixel(100px);
+        z-index: 999 !important;
+    }
+    @include tablet{
+        @include pixel(150px);
+    }
+}
+.vetor{
+    @include position(relative, 70px);
+    background: $fundo;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    color: white;
+    z-index: -1;
+    @extend %centralize;
+    @include small{
+        @include position(relative, 38px);
+        flex-direction: $coluna;
+        height: 370px;
+    }
+}
+.rodape img{
+    @include pixel(100%);
+}
+.txtTwo{
+    @include pixel(400px);
+    @extend %centralize;
+    @include tablet{
+        font-size: 16px;
+    }
+    @include small{
+        @include pixel(300px);
+        height: 100px;
+        font-size: 14px;
+    }
+}
+.txtTwo p{
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+}
